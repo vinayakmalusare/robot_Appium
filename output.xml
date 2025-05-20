@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-20T16:27:19.548643" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\Vinayak\Documents\Vinayak\Appium\robot-mobile-saucelabs\tests\login_test.robot">
+<test id="s1-t1" name="Open Existing Android App" line="10">
+<kw name="Open Android Installed App" owner="appium_config">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>deviceName=${ANDROID_DEVICE_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-20T16:27:19.722963" elapsed="9.256928"/>
+</kw>
+<status status="PASS" start="2025-05-20T16:27:19.722314" elapsed="9.257732"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-20T16:27:31.981448" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-20T16:27:28.980397" elapsed="3.001287"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-20T16:27:31.982974" level="INFO">App opened successfully</msg>
+<arg>App opened successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-20T16:27:31.982599" elapsed="0.000511"/>
+</kw>
+<kw name="login Into Application" owner="Login">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-20T16:27:31.986601" level="INFO">Clicking element 'xpath=//*[@class='android.widget.EditText']'.</msg>
+<msg time="2025-05-20T16:27:33.300584" level="INFO">xpath criteria: //*[@class='android.widget.EditText']</msg>
+<arg>locator=${USERNAME}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-20T16:27:31.984214" elapsed="1.316702"/>
+</kw>
+<kw name="Input Text Into Current Element" owner="AppiumLibrary">
+<msg time="2025-05-20T16:27:33.303619" level="INFO">Typing text 'Test@1234' into current text field</msg>
+<arg>text=Test@1234</arg>
+<doc>Types the given `text` into currently selected text field.</doc>
+<status status="PASS" start="2025-05-20T16:27:33.301216" elapsed="0.630633"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-20T16:27:33.934896" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Next"]'.</msg>
+<msg time="2025-05-20T16:27:34.067238" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Next"]</msg>
+<arg>locator=${BUTOON_LOGIN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-20T16:27:33.932213" elapsed="0.135197"/>
+</kw>
+<status status="PASS" start="2025-05-20T16:27:31.983735" elapsed="2.083856"/>
+</kw>
+<kw name="Verify Dashboard Page" owner="Dashboard">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-20T16:27:39.684512" level="INFO">xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']
+xpath criteria: //*[@resource-id='com.obs.android.olm.localmachine.dev:id/nav_welcome_text']</msg>
+<arg>locator=${WELCOME_TEXT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-20T16:27:34.068898" elapsed="5.615712"/>
+</kw>
+<status status="PASS" start="2025-05-20T16:27:34.068191" elapsed="5.616501"/>
+</kw>
+<kw name="Logout Application" owner="Dashboard">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-20T16:27:39.687081" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg time="2025-05-20T16:27:41.474374" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>locator=${MORE_OPTION}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-20T16:27:39.685384" elapsed="1.789186"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-20T16:27:41.571593" level="INFO">xpath criteria: //android.widget.TextView[@text='Log Out' and @resource-id='com.obs.android.olm.localmachine.dev:id/title']</msg>
+<arg>locator=${LOGOUT_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-20T16:27:41.475073" elapsed="0.096686"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-20T16:27:41.574146" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Log Out' and @resource-id='com.obs.android.olm.localmachine.dev:id/title']'.</msg>
+<msg time="2025-05-20T16:27:42.857640" level="INFO">xpath criteria: //android.widget.TextView[@text='Log Out' and @resource-id='com.obs.android.olm.localmachine.dev:id/title']</msg>
+<arg>locator=${LOGOUT_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-20T16:27:41.572002" elapsed="1.285965"/>
+</kw>
+<status status="PASS" start="2025-05-20T16:27:39.685073" elapsed="3.173053"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-20T16:27:42.858890" level="INFO">App Logout successfully</msg>
+<arg>App Logout successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-20T16:27:42.858623" elapsed="0.000359"/>
+</kw>
+<status status="PASS" start="2025-05-20T16:27:19.721272" elapsed="23.138251"/>
+</test>
+<status status="PASS" start="2025-05-20T16:27:19.550020" elapsed="23.310756"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
